@@ -1,0 +1,22 @@
+{
+  "status": "0",
+  "msg": "faild",
+  "result": [
+    {
+      "productId": "1001",
+      "productName": "音响",
+      "productPrice": 1999,
+      "productImg": "1.jpg"
+    },{
+      "productId": "1001",
+      "productName": "音响",
+      "productPrice": 1999,
+      "productImg": "1.jpg"
+    },{
+      "productId": "1001",
+      "productName": "音响",
+      "productPrice": 1999,
+      "productImg": "1.jpg"
+    }
+  ]
+}

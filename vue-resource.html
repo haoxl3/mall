@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a href="javascript:;" @click="get">get</a>
+        <a href="javascript:;">post</a>
+        <a href="javascript:;">jsonp</a>
+        {{msg}}
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+
+            },
+            methods: {
+                get: function(){
+                    this.$http.get("package.json", {
+                        params: {
+                            userId: '101'
+                        },
+                        headers: {
+                            token: "abc"
+                        }
+                    }).then(res => {
+                        this.msg = res.data;
+                    }, error=>{
+                        this.msg = error
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
